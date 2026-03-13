@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El 3alame — Nike Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">El <span>3alame</span></div>
+  <ul>
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#Products">Products</a></li>
+    <li><a href="#About">About</a></li>
+    <li><a href="#Review">Review</a></li>
+    <li><a href="#Service">Service</a></li>
+  </ul>
+  <div class="nav-icons">
+    <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-user"></i>
+    <!-- Hamburger (mobile only) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#Home" onclick="closeMenu()">Home <i class="fa-solid fa-chevron-right"></i></a>
+  <a href="#Products" onclick="closeMenu()">Products <i class="fa-solid fa-chevron-right"></i></a>
+  <a href="#About" onclick="closeMenu()">About <i class="fa-solid fa-chevron-right"></i></a>
+  <a href="#Review" onclick="closeMenu()">Review <i class="fa-solid fa-chevron-right"></i></a>
+  <a href="#Service" onclick="closeMenu()">Service <i class="fa-solid fa-chevron-right"></i></a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="Home">
+  <div class="hero-wrapper">
+    <div class="hero-text">
+      <div class="hero-badge"><i class="fa-solid fa-fire"></i> New Season 2025</div>
+      <h1>Nike <span>Collection</span></h1>
+      <p>Explore our curated Nike Collection, featuring premium footwear, apparel, and accessories designed for performance and style. Crafted with innovative materials and bold designs for every step.</p>
+      <div class="hero-btns">
+        <a href="#Products" class="btn-shop">Shop Now <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="hero-social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="shoes7.png" alt="Nike Shoe"
+        onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'shoe-fallback',textContent:'👟'}))"/>
+      <div class="badge-float b1"><div class="dot"></div> Air Max</div>
+      <div class="badge-float b2"><div class="dot"></div> Just Do It</div>
+      <div class="badge-float b3">⭐ 4.9 Rating</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="Products" class="content-section">
+  <div class="section-title">
+    <span>Our Collection</span>
+    <h2>Featured Products</h2>
+    <p>Discover the latest Nike styles built for champions.</p>
+  </div>
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">All</button>
+    <button class="filter-tab" data-filter="running">Running</button>
+    <button class="filter-tab" data-filter="basketball">Basketball</button>
+    <button class="filter-tab" data-filter="training">Training</button>
+    <button class="filter-tab" data-filter="lifestyle">Lifestyle</button>
+  </div>
+  <div class="products-grid">
+    <div class="product-card" data-category="running">
+      <div class="product-img-wrap">
+        <div class="shoe-emoji"><img src="shoes.png" alt=""></div>
+        <span class="product-badge">New</span>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Running</div>
+        <h3>Nike Air Max 270</h3>
+        <div class="stars">★★★★★</div>
+        <div class="desc">Max cushioning meets sleek street style.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>149<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="lifestyle">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#e0f0ff,#d0e8ff)">
+        <div class="shoe-emoji"><img src="shoes1.png" alt=""></div>
+        <span class="product-badge">Hot</span>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Lifestyle</div>
+        <h3>Nike React Infinity</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="desc">Built to reduce injury. Made to keep you moving.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>179<sub>.00</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="basketball">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#fff0e0,#ffe5c8)">
+        <div class="shoe-emoji"><img src="shoes2.png" alt=""></div>
+        <span class="product-badge">Sale</span>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Basketball</div>
+        <h3>Nike LeBron 21</h3>
+        <div class="stars">★★★★★</div>
+        <div class="desc">Dominate the court in signature comfort.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>199<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="training">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#e8ffe0,#d4f5c8)">
+        <div class="shoe-emoji"><img src="shoes3.png" alt=""></div>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Training</div>
+        <h3>Nike Free Run 5.0</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="desc">Natural movement for everyday training.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>109<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="training">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0)">
+        <div class="shoe-emoji"><img src="shoes4.png" alt=""></div>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Training</div>
+        <h3>Nike Air Zoom</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="desc">Responsive cushioning built for speed.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>119<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="running">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9)">
+        <div class="shoe-emoji"><img src="shoes5.png" alt=""></div>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Running</div>
+        <h3>Nike Pegasus 40</h3>
+        <div class="stars">★★★★★</div>
+        <div class="desc">Your daily go-to running shoe, perfected.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>129<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="lifestyle">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#fff9e6,#fff3cc)">
+        <div class="shoe-emoji"><img src="shoes6.png" alt=""></div>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Lifestyle</div>
+        <h3>Nike Cortez</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="desc">Classic style meets modern comfort.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>89<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="basketball">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2)">
+        <div class="shoe-emoji"><img src="shoes7.png" alt=""></div>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Basketball</div>
+        <h3>Nike KD 16</h3>
+        <div class="stars">★★★★★</div>
+        <div class="desc">Elite performance for elite players.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>159<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="running">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7)">
+        <div class="shoe-emoji"><img src="shoes8.png" alt=""></div>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Running</div>
+        <h3>Nike Vomero 17</h3>
+        <div class="stars">★★★★☆</div>
+        <div class="desc">Plush cushioning for long-distance runs.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>139<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="lifestyle">
+      <div class="product-img-wrap" style="background:linear-gradient(135deg,#fce4e4,#ffcccc)">
+        <div class="shoe-emoji"><img src="red_shoes1.png" alt=""></div>
+        <div class="product-wish"><i class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="product-info">
+        <div class="cat">Lifestyle</div>
+        <h3>Nike Air Force 1</h3>
+        <div class="stars">★★★★★</div>
+        <div class="desc">The icon. Timeless style, all-day comfort.</div>
+        <div class="product-footer">
+          <div class="price"><sub>$</sub>99<sub>.99</sub></div>
+          <button class="btn-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="About">
+  <div class="about-visual">
+    <div class="about-big-circle"><img src="logshoes.png" alt="" style="width:80%;height:80%;object-fit:contain;"></div>
+    <div class="about-stat-card s1"><span class="num">50K+</span><span class="lbl">Customers</span></div>
+    <div class="about-stat-card s2"><span class="num">200+</span><span class="lbl">Products</span></div>
+  </div>
+  <div class="about-content">
+    <span class="eyebrow">Our Story</span>
+    <h2>Born to Move.<br>Built to Win.</h2>
+    <p>El 3alame is your premier destination for authentic Nike products. We bring you the latest collections, exclusive drops, and timeless classics — all under one roof.</p>
+    <p>Whether you're an athlete chasing a personal best or a sneakerhead building the perfect collection, we have exactly what you need.</p>
+    <ul class="features-list">
+      <li><div class="check"><i class="fa-solid fa-check"></i></div> 100% Authentic Nike Products</li>
+      <li><div class="check"><i class="fa-solid fa-check"></i></div> Free Shipping on Orders Over $99</li>
+      <li><div class="check"><i class="fa-solid fa-check"></i></div> 30-Day Easy Returns</li>
+      <li><div class="check"><i class="fa-solid fa-check"></i></div> Expert Customer Support 24/7</li>
+    </ul>
+    <a href="#Products" class="btn-shop">Explore Products <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="Review" class="content-section">
+  <div class="section-title">
+    <span>Testimonials</span>
+    <h2>What Customers Say</h2>
+    <p>Real reviews from real Nike fans around the world.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="quote-icon">"</div>
+      <div class="stars">★★★★★</div>
+      <p>These are the most comfortable shoes I've ever worn. The Air Max 270s feel like walking on clouds — absolutely worth every penny!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">A</div>
+        <div class="reviewer-info"><h4>Ahmed Hassan</h4><span>Verified Buyer</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="quote-icon">"</div>
+      <div class="stars">★★★★★</div>
+      <p>Fast shipping, authentic products, and amazing packaging. El 3alame has become my go-to store for all my Nike needs. Highly recommend!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">S</div>
+        <div class="reviewer-info"><h4>Sara Mahmoud</h4><span>Loyal Customer</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="quote-icon">"</div>
+      <div class="stars">★★★★☆</div>
+      <p>Great selection and the website is super easy to navigate. The LeBron 21s I ordered arrived perfectly and fit exactly as expected.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">M</div>
+        <div class="reviewer-info"><h4>Mohamed Ali</h4><span>Verified Buyer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section id="Service" class="content-section">
+  <div class="section-title">
+    <span>Why Choose Us</span>
+    <h2>Our Services</h2>
+    <p>We go above and beyond to deliver an exceptional experience.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+      <h3>Fast Delivery</h3>
+      <p>Get your order delivered to your doorstep within 2–5 business days.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3>Secure Payment</h3>
+      <p>All transactions are encrypted and 100% secure with top payment providers.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+      <h3>Easy Returns</h3>
+      <p>Return any item within 30 days for a full refund, hassle-free.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+      <h3>24/7 Support</h3>
+      <p>Our dedicated team is always available to help with any questions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <h2>Ready to Step Up?</h2>
+  <p>Join over 50,000 happy customers and find your perfect pair today.</p>
+  <a href="#Products" class="btn-cta-white">Shop Collection <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<footer>
+  <p>© 2025 <span>El 3alame</span> — Nike Store. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // ── HAMBURGER MENU ──
+  const hamburger  = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', e => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      closeMenu();
+    }
+  });
+  // ── PRODUCT FILTER ──
+  const tabs  = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.product-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // 1. Update active tab
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filter = tab.dataset.filter; // "all" | "running" | etc.
+
+      // 2. Show / hide cards
+      cards.forEach(card => {
+        const category = card.dataset.category;
+        if (filter === 'all' || category === filter) {
+          card.classList.remove('hidden');
+          // Re-trigger animation
+          card.style.animation = 'none';
+          card.offsetHeight; // reflow
+          card.style.animation = '';
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // ── WISHLIST TOGGLE ──
+  document.querySelectorAll('.product-wish').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const icon = btn.querySelector('i');
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+      btn.style.color = icon.classList.contains('fa-solid') ? 'var(--pink)' : '';
+    });
+  });
+</script>
+</body>
+</html>
